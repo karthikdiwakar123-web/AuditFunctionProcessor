@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Auditfunction": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7194",
+      "environmentVariables": {
+        "ServiceBusConnection__fullyQualifiedNamespace": "KarthikServiceBus.servicebus.windows.net",
+        "ServiceBusConnection__queueName": "auditdataqueue"
+      }
+    }
+  }
+}
