@@ -13,7 +13,7 @@ public class AuditProcessor(ILogger<AuditProcessor> logger, IAuditServiceBusProc
     private readonly IAuditServiceBusProcessor _serviceBusProcessor= serviceBusProcessor;
 
     [Function("AuditProcessor")]
-    public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequest req)
+    public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.User, "get", "post")] HttpRequest req)
     {
         try
         {
